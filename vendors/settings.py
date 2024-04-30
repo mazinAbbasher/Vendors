@@ -136,3 +136,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAdminUser',
     ],
 }
+
+USE_TZ = False

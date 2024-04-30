@@ -135,6 +135,7 @@ def acknowledge_purchase_order(request, po_id):
 
     purchase_order = get_object_or_404(PurchaseOrder, id=po_id)
     if purchase_order.vendor.user != request.user:
+
         return Response(
             {'message': 'Access denied.'},
             status=status.HTTP_401_UNAUTHORIZED
